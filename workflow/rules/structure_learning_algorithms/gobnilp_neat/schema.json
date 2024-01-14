@@ -1,0 +1,98 @@
+{
+    "title": "gobnilp_neat",
+    "description": "Gobnilp objects",
+    "type": "array",
+    "items": {
+        "title": "gobnilp item",
+        "description": "Gobnilp instance",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "Unique identifier"
+            },
+            "score_type": {
+                "type": "string",
+                "enum": [
+                    "BGe",
+                    "GaussianL0"
+                ]
+            },
+            "extra_args": {
+                "description": "File with extra arguments to pass to the solver. The file should be placed in resources/extra_args and the format is the same as used by gobnilp (see the docs).",
+                "anyOf": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
+            },
+            "constraints": {
+                "description": "File with constraints to pass to the solver. The file should be placed in resources/constraints and the format is the same as used by gobnilp (see the docs).",
+                "anyOf": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
+            },
+	    "plot": {
+                "type": "boolean"
+            },
+            "alpha_omega_minus_nvars": {
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnatnumnull"
+            },
+            "alpha_mu": {
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegnumnull"
+            },
+	    "initpalim": {
+		"$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegintnull"
+	    },
+	    "disallowedpalim": {
+                "type": "integer"
+            },
+	    "maxinitfvars": {
+		"$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegintnull"
+            },
+            "timeout": {
+                "description": "Use the best DAG found so far after this number of seconds.",
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegnumnull"
+            },
+            "time_limit": {
+                "description": "Time limit in seconds for the solver (not including the time to build the score tables).",
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegnumnull"
+            },
+            "gap_limit": {
+                "description": "Gap limit.",
+                "$ref": "../../../schemas/definitions.schema.json#/definitions/flexnonnegnumnull"
+            }
+        },
+        "additionalProperties": false,
+        "required": [
+            "id",
+	    "plot",
+            "timeout"
+        ],
+        "examples": [
+            {
+                "id": "gobnilp-bge",
+                "score_type": "BGe",
+                "extra_args": null,
+                "constraints": null,
+                "alpha_mu": [
+                    0.00001,
+                    0.0001,
+                    0.001
+                ],
+                "alpha_omega_minus_nvars": 2,
+                "time_limit": null,
+                "gap_limit": null,
+                "timeout": 800
+            }
+        ]
+    }
+}
