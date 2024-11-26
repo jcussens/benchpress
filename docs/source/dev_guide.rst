@@ -1,10 +1,9 @@
 Authors
 ################
 
-| `Felix Rios <https://www.kth.se/profile/flrios?l=en>`_
-| `Department of Mathematics <https://www.kth.se/math/mathematics-of-data/mathematics-of-data-and-ai-1.947023>`_
-| KTH Stockholm, Sweden
-| (formerly at University of Basel)
+| `Felix Rios <https://felixleopoldo.github.io>`_
+| `Department of Paediatrics, Division of Biomedical Data Science <https://medicine.nus.edu.sg/sites/bids/people.html>`_
+| NUS Singapore
 
 | `Giusi Moffa <https://dmi.unibas.ch/en/persons/moffa-giusi/>`_
 | `Department of Mathematics and Computer Science <https://dmi.unibas.ch/en/>`_
@@ -25,6 +24,10 @@ Contributors
 | `Department of Statistical Sciences  <https://www.statistics.utoronto.ca/>`_
 | University of Toronto, Canada
 
+| `Gomathi Lakshmanan <https://www.linkedin.com/in/gomathi-l/>`_
+| Intern at `A-Star <https://www.a-star.edu.sg/>`_
+| A*Star, Singapore
+
 | Aditya Singh
 | `Department of Computer Science <http://www.bristol.ac.uk/engineering/departments/computerscience/>`_
 | University of Bristol, UK
@@ -32,13 +35,13 @@ Contributors
 Credits
 ########
 
-We would like to thank all the developers and researchers that have made their software available open-source.
+We would like to thank all the developers and researchers who made their software available open-source.
 
 Contributing
 #################
 
 To add more algorithms, datasets or other functionalities fork the repository https://github.com/felixleopoldo/benchpress.
-For problems, bug reporting, or questions please raise an issue or start a discussion there.
+For new feature ideas, problems, bug reporting, or questions please raise an issue or start a discussion there. 
 
 Citing
 ########
@@ -52,7 +55,7 @@ BibTeX entry for citing Benchpress:
       author={Felix L. Rios and Giusi Moffa and Jack Kuipers},
       year={2021},
       eprint={2107.03863},
-      archivePrefix={arXiv},
+      archivePrefix={arXiv (to appear in the Journal of Statistical Software)},
       primaryClass={stat.ML}
   }
 
